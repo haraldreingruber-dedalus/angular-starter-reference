@@ -39,9 +39,9 @@ jobs:
           tags: haraldreingruberdedalus/angular-starter-team-learning-reference:${{ steps.tag_version.outputs.new_tag }}
       - name: Prepare helm chart
         run: |
-          sed -i -e "s/BUILD_VERSION/${{ steps.tag_version.outputs.new_tag }}/g" charts/angular-starter-team-learning-reference/Chart.yaml
-          sed -i -e "s/HELM_VERSION/${{ steps.tag_version.outputs.new_version }}/g" charts/angular-starter-team-learning-reference/Chart.yaml
-          sed -i -e "s/BUILD_VERSION/${{ steps.tag_version.outputs.new_tag }}/g" charts/angular-starter-team-learning-reference/values.yaml
+          sed -i -e "s/BUILD_VERSION/${{ steps.tag_version.outputs.new_tag }}/g" helm/angular-starter-team-learning-reference/Chart.yaml
+          sed -i -e "s/HELM_VERSION/${{ steps.tag_version.outputs.new_version }}/g" helm/angular-starter-team-learning-reference/Chart.yaml
+          sed -i -e "s/BUILD_VERSION/${{ steps.tag_version.outputs.new_tag }}/g" helm/angular-starter-team-learning-reference/values.yaml
       - name: Upload Helm chart
         uses: actions/upload-artifact@v2
         with:
