@@ -62,8 +62,8 @@ jobs:
         uses: azure/aks-set-context@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
-          resource-group: 'web-viewer-tl-20210713-k8'
-          cluster-name: 'web-viewer-team-learning-20210713-kube'
+          resource-group: 'web-viewer-tl-20211210-cicd'
+          cluster-name: 'web-viewer-team-learning-2021-12-10'
         id: login
       - name: Install Helm
         uses: azure/setup-helm@v1
