@@ -6,8 +6,9 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Angular Starter', () => {
   test('should have terminal example', async ({ page }) => {
-    await expect(page.locator('terminal')).toHaveText([
+    await expect(page.locator('.terminal')).toHaveText([
       "ng generate component xyz"
     ]);
   });
+
 });
