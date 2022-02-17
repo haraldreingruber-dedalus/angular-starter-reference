@@ -21,6 +21,11 @@ const config: PlaywrightTestConfig = {
      */
     timeout: 5000
   },
+  webServer: {
+    command: 'npx ng serve',
+    port: 4200,
+    timeout: 120 * 1000,
+  },
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
